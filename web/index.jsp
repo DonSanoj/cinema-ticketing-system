@@ -1,13 +1,23 @@
+<%-- 
+    Document   : index
+    Created on : Nov 7, 2024, 7:26:16 PM
+    Author     : DON
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/logo.png" type="image/x-icon">
     <title>ABC Cinema</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
+    
+    <%@ include file="./components/header.jsp" %>
 
     <!-- Main Carousel Section -->
     <section class="bg-white text-white">
@@ -209,53 +219,8 @@
     </section>
 
     <!-- JavaScript for Carousels -->
-<script>
-    // Main Carousel functionality
-    let currentSlide = 0;
-    const slides = document.querySelectorAll("#slider > div");
-    const totalSlides = slides.length;
-
-    document.getElementById("prevBtn").addEventListener("click", () => {
-        currentSlide = (currentSlide > 0) ? currentSlide - 1 : totalSlides - 1;
-        updateCarousel();
-    });
-
-    document.getElementById("nextBtn").addEventListener("click", () => {
-        currentSlide = (currentSlide < totalSlides - 1) ? currentSlide + 1 : 0;
-        updateCarousel();
-    });
-
-    function updateCarousel() {
-        document.getElementById("slider").style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
-
-    // Auto-slide functionality for the main carousel
-    setInterval(() => {
-        currentSlide = (currentSlide < totalSlides - 1) ? currentSlide + 1 : 0;
-        updateCarousel();
-    }, 5000);
-
-    // Coming Soon Slider functionality
-    let comingSoonIndex = 0;
-    const comingSoonSlider = document.getElementById("comingSoonSlider");
-    const comingSoonSlides = comingSoonSlider.querySelectorAll("div");
-    const totalComingSoonSlides = comingSoonSlides.length;
-    const slideWidth = comingSoonSlides[0].offsetWidth + 16; // Adjust 16 for margin
-
-    document.getElementById("comingSoonPrev").addEventListener("click", () => {
-        comingSoonIndex = (comingSoonIndex > 0) ? comingSoonIndex - 1 : totalComingSoonSlides - 1;
-        updateComingSoonSlider();
-    });
-
-    document.getElementById("comingSoonNext").addEventListener("click", () => {
-        comingSoonIndex = (comingSoonIndex < totalComingSoonSlides - 1) ? comingSoonIndex + 1 : 0;
-        updateComingSoonSlider();
-    });
-
-    function updateComingSoonSlider() {
-        comingSoonSlider.style.transform = `translateX(-${comingSoonIndex * slideWidth}px)`;
-    }
-</script>
+    <script src="./js/carousel.js"></script>
 
 </body>
 </html>
+
