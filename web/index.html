@@ -5,129 +5,257 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABC Cinema</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
 
-    <!-- Carousel Banner Section -->
-    <section class="container mx-auto my-6 relative overflow-hidden">
-        <div id="carousel" class="relative w-full">
-            <!-- Slide 1 -->
-            <div class="carousel-slide w-full h-64 bg-cover bg-center rounded-lg" style="background-image: url('./assets/img/img 1.jpg');">
-                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div class="text-center text-white">
-                        <h2 class="text-4xl font-bold">VIKINGS</h2>
-                        <button class="bg-red-600 px-4 py-2 rounded-lg mt-2">Buy Tickets</button>
+    <!-- Main Carousel Section -->
+    <section class="bg-white text-white">
+
+        <!-- Main Carousel -->
+        <section class="container mx-auto my-12 relative bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="relative">
+                <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Slide 1 -->
+                    <div class="min-w-full relative">
+                        <img src="./assets/img/img-6.jpg" alt="The Wild Robot" class="w-full h-45 object-cover brightness-75">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <h2 class="text-5xl font-bold mb-4">THE WILD ROBOT</h2>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition-transform duration-200 transform hover:scale-105">Buy Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="min-w-full relative">
+                        <img src="./assets/img/img-2.jpg" alt="Smile 2" class="w-full h-45 object-cover brightness-75">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <h2 class="text-5xl font-bold mb-4">SMILE 2</h2>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition-transform duration-200 transform hover:scale-105">Buy Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="min-w-full relative">
+                        <img src="./assets/img/img-3.jpg" alt="Venom 2" class="w-full h-45 object-cover brightness-75">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <h2 class="text-5xl font-bold mb-4">VENOM 2</h2>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition-transform duration-200 transform hover:scale-105">Buy Tickets</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- Carousel Controls -->
+                <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-700 bg-opacity-60 hover:bg-opacity-80 text-white rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110">
+                    <span class="material-icons">chevron_left</span>
+                </button>
+                <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-700 bg-opacity-60 hover:bg-opacity-80 text-white rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110">
+                    <span class="material-icons">chevron_right</span>
+                </button>
             </div>
-            <!-- Slide 2 -->
-            <div class="carousel-slide w-full h-64 bg-cover bg-center rounded-lg hidden" style="background-image: url('./assets/img/img-2.jpg');">
-                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div class="text-center text-white">
-                        <h2 class="text-4xl font-bold">MOVIE TITLE 2</h2>
-                        <button class="bg-red-600 px-4 py-2 rounded-lg mt-2">Buy Tickets</button>
+        </section>
+
+        <!-- Now Showing Section -->
+        <section class="bg-black py-12">
+            <h2 class="text-2xl text-white font-bold mb-8 text-center">Now Showing</h2>
+
+            <!-- Movie Cards Grid -->
+            <section class="container mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Large Card -->
+                <div class="col-span-2 row-span-2 bg-gray-800 rounded-lg relative h-64 md:h-96 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img 1.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-xl font-bold">Movie Name</h4>
+                        <p class="text-gray-300">Show Info</p>
                     </div>
                 </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="carousel-slide w-full h-64 bg-cover bg-center rounded-lg hidden" style="background-image: url('./assets/img/img-3.jpg');">
-                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div class="text-center text-white">
-                        <h2 class="text-4xl font-bold">MOVIE TITLE 3</h2>
-                        <button class="bg-red-600 px-4 py-2 rounded-lg mt-2">Buy Tickets</button>
+
+                <!-- Smaller Cards -->
+                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img-4.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-lg font-bold">Movie Name</h4>
+                        <p class="text-gray-300">Show Info</p>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Carousel Controls -->
-        <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-gray-800 bg-opacity-50 text-white rounded-r-lg">&lt;</button>
-        <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-gray-800 bg-opacity-50 text-white rounded-l-lg">&gt;</button>
-    </section>
-
-    <!-- Filter Buttons Section -->
-    <section class="container mx-auto my-6 text-right space-x-2">
-        <button class="bg-black text-white px-4 py-2 rounded-lg">GENRE</button>
-        <button class="bg-black text-white px-4 py-2 rounded-lg">FORMAT</button>
-        <button class="bg-black text-white px-4 py-2 rounded-lg">LANGUAGE</button>
-    </section>
-
-    <!-- Now Showing Section -->
-    <section class="container mx-auto my-12">
-        <h3 class="text-2xl font-bold mb-4">Now Showing</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <!-- Featured Movie -->
-            <div class="col-span-1 md:col-span-2 bg-black rounded-lg relative">
-                <img src="movie-featured.jpg" alt="Featured Movie" class="w-full h-full object-cover rounded-lg opacity-70">
-                <div class="absolute bottom-4 left-4 text-white">
-                    <h4 class="text-xl font-bold">Movie Name</h4>
-                    <button class="bg-red-600 px-4 py-2 rounded-lg mt-2">Buy Tickets</button>
+                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img-2.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-lg font-bold">Movie Name</h4>
+                        <p class="text-gray-300">Show Info</p>
+                    </div>
                 </div>
-            </div>
-            <!-- Smaller Movie Cards -->
-            <div class="bg-black rounded-lg p-4 relative">
-                <img src="movie-image2.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-70">
-                <div class="absolute bottom-4 left-4 text-white">
-                    <h4 class="text-lg font-bold">Movie Name</h4>
-                    <p class="text-gray-300">Show Info</p>
+                
+                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img-4.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-lg font-bold">Movie Name</h4>
+                        <p class="text-gray-300">Show Info</p>
+                    </div>
                 </div>
-            </div>
-            <div class="bg-black rounded-lg p-4 relative">
-                <img src="movie-image3.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-70">
-                <div class="absolute bottom-4 left-4 text-white">
-                    <h4 class="text-lg font-bold">Movie Name</h4>
-                    <p class="text-gray-300">Show Info</p>
+                
+                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img-4.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-lg font-bold">Movie Name</h4>
+                        <p class="text-gray-300">Show Info</p>
+                    </div>
                 </div>
+                
+                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img-4.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-lg font-bold">Movie Name</h4>
+                        <p class="text-gray-300">Show Info</p>
+                    </div>
+                </div>
+                
+            </section>
+        </section>
+
+        <!-- Coming Soon Section -->
+        <section class=" bg-white container mx-auto py-12 text-center text-black">
+            <h2 class="text-3xl font-bold text-black mb-6">COMING SOON</h2>
+            
+            <!-- Coming Soon Slider -->
+            <div class="relative overflow-hidden">
+                <div id="comingSoonSlider" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Movie Cards -->
+                    <!-- Slide 1 -->
+                    <div class="min-w-full md:min-w-1/5   items-center bg-white p-4 rounded-lg mx-2">
+                        <img src="./assets/img/img6.jpg" alt="Moana 2" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold">MOANA 2</h3>
+                        <p class="text-sm text-gray-400">IN CINEMAS 29TH NOVEMBER</p>
+                        <div class="flex mt-2 space-x-4">
+                            <button class="flex items-center space-x-1 text-sm">
+                                <span class="material-icons">play_circle</span>
+                                <span>WATCH TRAILER</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-sm">
+                                <span class="material-icons">info</span>
+                                <span>MORE INFO</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    
+                     <div class="min-w-full md:min-w-1/5   items-center bg-white p-4 rounded-lg mx-2">
+                        <img src="./assets/img/img7.jpg" alt="Moana 2" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <h3 class=" bg-white text-xl font-bold">MOANA 2</h3>
+                        <p class=" bg-white text-sm text-gray-400">IN CINEMAS 29TH NOVEMBER</p>
+                        <div class=" bg-white flex mt-2 space-x-4">
+                            <button class="flex items-center space-x-1 text-sm">
+                                <span class="material-icons">play_circle</span>
+                                <span>WATCH TRAILER</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-sm">
+                                <span class="bg-black material-icons">info</span>
+                                <span>MORE INFO</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    
+                     <div class="min-w-full md:min-w-1/5   items-center bg-white p-4 rounded-lg mx-2">
+                        <img src="./assets/img/img8.jpg" alt="Moana 2" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold">MOANA 2</h3>
+                        <p class="text-sm text-gray-400">IN CINEMAS 29TH NOVEMBER</p>
+                        <div class="flex mt-2 space-x-4">
+                            <button class="flex items-center space-x-1 text-sm">
+                                <span class="bg-black material-icons">play_circle</span>
+                                <span>WATCH TRAILER</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-sm">
+                                <span class=" bg-black material-icons">info</span>
+                                <span>MORE INFO</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    
+                     <div class="min-w-full md:min-w-1/5   items-center bg-white p-4 rounded-lg mx-2">
+                        <img src="./assets/img/img9.jpg" alt="Moana 2" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold">MOANA 2</h3>
+                        <p class="text-sm text-gray-400">IN CINEMAS 29TH NOVEMBER</p>
+                        <div class="flex mt-2 space-x-4">
+                            <button class="flex items-center space-x-1 text-sm">
+                                <span class="bg-black material-icons">play_circle</span>
+                                <span>WATCH TRAILER</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-sm">
+                                <span class="bg-black material-icons">info</span>
+                                <span>MORE INFO</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Additional Slides -->
+                    <!-- Add additional slides similarly for the remaining movies -->
+                </div>
+
+                <!-- Coming Soon Slider Controls -->
+                <button id="comingSoonPrev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 bg-opacity-60 hover:bg-opacity-80 text-white rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110">
+                    <span class="material-icons">chevron_left</span>
+                </button>
+                <button id="comingSoonNext" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 bg-opacity-60 hover:bg-opacity-80 text-white rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110">
+                    <span class=" material-icons">chevron_right</span>
+                </button>
             </div>
-            <!-- Add more movie cards as needed -->
-        </div>
+        </section>
+
     </section>
 
-    <!-- Coming Soon Section -->
-    <section class="container mx-auto my-12">
-        <h3 class="text-2xl font-bold mb-4">Coming Soon</h3>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div class="bg-white rounded-lg shadow-md p-4">
-                <img src="movie-image4.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg">
-                <h4 class="text-lg font-bold mt-2">Movie Name</h4>
-                <p class="text-gray-500">Show Info</p>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-4">
-                <img src="movie-image5.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg">
-                <h4 class="text-lg font-bold mt-2">Movie Name</h4>
-                <p class="text-gray-500">Show Info</p>
-            </div>
-            <!-- Repeat for more movies -->
-        </div>
-    </section>
+    <!-- JavaScript for Carousels -->
+<script>
+    // Main Carousel functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll("#slider > div");
+    const totalSlides = slides.length;
 
-    <!-- JavaScript for Carousel -->
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
+    document.getElementById("prevBtn").addEventListener("click", () => {
+        currentSlide = (currentSlide > 0) ? currentSlide - 1 : totalSlides - 1;
+        updateCarousel();
+    });
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('hidden', i !== index);
-            });
-        }
+    document.getElementById("nextBtn").addEventListener("click", () => {
+        currentSlide = (currentSlide < totalSlides - 1) ? currentSlide + 1 : 0;
+        updateCarousel();
+    });
 
-        document.getElementById('prevBtn').addEventListener('click', () => {
-            currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
-            showSlide(currentSlide);
-        });
+    function updateCarousel() {
+        document.getElementById("slider").style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
 
-        document.getElementById('nextBtn').addEventListener('click', () => {
-            currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
-            showSlide(currentSlide);
-        });
+    // Auto-slide functionality for the main carousel
+    setInterval(() => {
+        currentSlide = (currentSlide < totalSlides - 1) ? currentSlide + 1 : 0;
+        updateCarousel();
+    }, 5000);
 
-        // Auto-slide every 5 seconds
-        setInterval(() => {
-            currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
-            showSlide(currentSlide);
-        }, 5000);
-    </script>
+    // Coming Soon Slider functionality
+    let comingSoonIndex = 0;
+    const comingSoonSlider = document.getElementById("comingSoonSlider");
+    const comingSoonSlides = comingSoonSlider.querySelectorAll("div");
+    const totalComingSoonSlides = comingSoonSlides.length;
+    const slideWidth = comingSoonSlides[0].offsetWidth + 16; // Adjust 16 for margin
+
+    document.getElementById("comingSoonPrev").addEventListener("click", () => {
+        comingSoonIndex = (comingSoonIndex > 0) ? comingSoonIndex - 1 : totalComingSoonSlides - 1;
+        updateComingSoonSlider();
+    });
+
+    document.getElementById("comingSoonNext").addEventListener("click", () => {
+        comingSoonIndex = (comingSoonIndex < totalComingSoonSlides - 1) ? comingSoonIndex + 1 : 0;
+        updateComingSoonSlider();
+    });
+
+    function updateComingSoonSlider() {
+        comingSoonSlider.style.transform = `translateX(-${comingSoonIndex * slideWidth}px)`;
+    }
+</script>
 
 </body>
 </html>
