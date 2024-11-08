@@ -10,7 +10,7 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
 <!-- header.jsp -->
-<header class="bg-white flex justify-between items-center p-2 px-4 md:px-8 shadow-lg">
+<header class="bg-white flex justify-between items-center p-2 px-4 md:px-8 shadow-lg w-full fixed z-10 relative mb-4">
     <!-- Logo Section -->
     <div class="flex items-center">
         <img src="./assets/img/logo.png" alt="ABCLogo" class="w-18 h-16 p-1" />

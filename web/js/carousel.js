@@ -4,22 +4,12 @@
  */
 
 // carousel.js
-document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.getElementById('slider');
-    const nextBtn = document.getElementById('nextBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    let currentSlide = 0;
+const progressCircle = document.querySelector(".autoplay-progress svg");
+const progressContent = document.querySelector(".autoplay-progress span");
 
-    // Adjust as per your slide logic
-    const slideWidth = slider.children[0].offsetWidth;
-
-    nextBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % slider.children.length;
-        slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-    });
-
-    prevBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + slider.children.length) % slider.children.length;
-        slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-    });
+const swiperEl = document.querySelector("swiper-container");
+swiperEl.addEventListener("autoplaytimeleft", (e) => {
+    const [swiper, time, progress] = e.detail;
+    progressCircle.style.setProperty("--progress", 1 - progress);
+    progressContent.textContent = `${Math.ceil(time / 1000)}s`;
 });
