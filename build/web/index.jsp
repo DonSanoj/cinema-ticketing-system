@@ -146,13 +146,13 @@
                 </div>
             </div>
 
-            <div class="bg-black py-12 container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 p-4">
-                <!--Large Card--> 
+            <div class="bg-black container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 p-4">
+                <!-- Large Card -->
                 <div class="col-span-2 row-span-2 bg-gray-800 rounded-lg relative h-64 md:h-full shadow-lg hover:scale-105 transition-transform duration-300">
                     <img src="./assets/img/img 1.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-3xl font-bold">Movie Name</h4>
-                        <h2 class="text-md front-bold mb-2">English . Action</h2>
+                        <h2 class="text-md font-bold mb-2">English . Action</h2>
 
                         <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
                             Book Tickets
@@ -163,12 +163,12 @@
                     </div>
                 </div>
 
-                <!--Smaller Cards--> 
+                <!-- Smaller Cards -->
                 <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
                     <img src="./assets/img/img-4.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
-                        <h2 class="text-md front-bold mb-2">English . Action</h2>
+                        <h2 class="text-md font-bold mb-2">English . Action</h2>
 
                         <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
                             Book Tickets
@@ -183,7 +183,7 @@
                     <img src="./assets/img/img-2.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
-                        <h2 class="text-md front-bold mb-2">English . Action</h2>
+                        <h2 class="text-md font-bold mb-2">English . Action</h2>
 
                         <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
                             Book Tickets
@@ -192,16 +192,14 @@
                             Watch Trailer
                         </button>
                     </div>
-                </div>          
-            </div>
+                </div>
 
-            <div class="bg-black py-12 container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 p-4 bg-red-500">
-                <!--Smaller Cards--> 
+                <!-- New Smaller Boxes -->
                 <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
-                    <img src="./assets/img/img-4.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <img src="./assets/img/img-5.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
-                        <h2 class="text-md front-bold mb-2">English . Action</h2>
+                        <h2 class="text-md font-bold mb-2">English . Action</h2>
 
                         <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
                             Book Tickets
@@ -213,10 +211,10 @@
                 </div>
 
                 <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
-                    <img src="./assets/img/img-2.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <img src="./assets/img/img-6.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
-                        <h2 class="text-md front-bold mb-2">English . Action</h2>
+                        <h2 class="text-md font-bold mb-2">English . Action</h2>
 
                         <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
                             Book Tickets
@@ -226,13 +224,12 @@
                         </button>
                     </div>
                 </div>
-                
-                <!--Large Card--> 
-                <div class="col-span-2 row-span-2 bg-gray-800 rounded-lg relative h-64 md:h-full shadow-lg hover:scale-105 transition-transform duration-300">
-                    <img src="./assets/img/img 1.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+
+                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img-7.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
-                        <h4 class="text-3xl font-bold">Movie Name</h4>
-                        <h2 class="text-md front-bold mb-2">English . Action</h2>
+                        <h4 class="text-2xl font-bold">Movie Name</h4>
+                        <h2 class="text-md font-bold mb-2">English . Action</h2>
 
                         <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
                             Book Tickets
@@ -243,103 +240,122 @@
                     </div>
                 </div>
             </div>
+
         </section>
 
         <!--Coming Soon Section--> 
-        <section class=" bg-white container mx-auto py-12 text-center text-black">
-            <h2 class="text-3xl font-bold text-black mb-6">COMING SOON</h2>
+        <section class="bg-black text-white mt-6 mb-10">
 
-            <!--Coming Soon Slider--> 
-            <div class="relative overflow-hidden">
-                <div id="comingSoonSlider" class="flex transition-transform duration-500 ease-in-out">
-                    <!--Movie Cards--> 
-                    <!--Slide 1--> 
-                    <div class="min-w-full md:min-w-1/5   items-center bg-white p-4 rounded-lg mx-2">
-                        <img src="./assets/img/img6.jpg" alt="Moana 2" class="w-full h-64 object-cover rounded-lg mb-4">
-                        <h3 class="text-xl font-bold">MOANA 2</h3>
-                        <p class="text-sm text-gray-400">IN CINEMAS 29TH NOVEMBER</p>
-                        <div class="flex mt-2 space-x-4">
-                            <button class="flex items-center space-x-1 text-sm">
-                                <span class="material-icons">play_circle</span>
-                                <span>WATCH TRAILER</span>
-                            </button>
-                            <button class="flex items-center space-x-1 text-sm">
-                                <span class="material-icons">info</span>
-                                <span>MORE INFO</span>
-                            </button>
-                        </div>
+            <div class="p-4 flex items-center justify-between rounded-lg shadow-md">
+                <!-- Title Section -->
+                <div class=" py-4 px-6 rounded-lg shadow-lg">
+                    <h2 class="text-3xl text-white font-bold text-center">Coming Soon...</h2>
+                </div>
+            </div>
+
+            <div class="bg-black container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 p-4">
+                <!-- Large Card -->
+                <div class="col-span-2 row-span-2 bg-gray-800 rounded-lg relative h-64 md:h-full shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img 1.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-3xl font-bold">Movie Name</h4>
+                        <h2 class="text-md font-bold mb-2">English . Action</h2>
+
+                        <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
+                            Show Info
+                        </button>
+                        <button class="bg-transparent text-white border border-white px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
+                            Watch Trailer
+                        </button>
                     </div>
-
-
-                    <div class="min-w-full md:min-w-1/5   items-center bg-white p-4 rounded-lg mx-2">
-                        <img src="./assets/img/img7.jpg" alt="Moana 2" class="w-full h-64 object-cover rounded-lg mb-4">
-                        <h3 class=" bg-white text-xl font-bold">MOANA 2</h3>
-                        <p class=" bg-white text-sm text-gray-400">IN CINEMAS 29TH NOVEMBER</p>
-                        <div class=" bg-white flex mt-2 space-x-4">
-                            <button class="flex items-center space-x-1 text-sm">
-                                <span class="material-icons">play_circle</span>
-                                <span>WATCH TRAILER</span>
-                            </button>
-                            <button class="flex items-center space-x-1 text-sm">
-                                <span class="bg-black material-icons">info</span>
-                                <span>MORE INFO</span>
-                            </button>
-                        </div>
-                    </div>
-
-
-                    <div class="min-w-full md:min-w-1/5   items-center bg-white p-4 rounded-lg mx-2">
-                        <img src="./assets/img/img8.jpg" alt="Moana 2" class="w-full h-64 object-cover rounded-lg mb-4">
-                        <h3 class="text-xl font-bold">MOANA 2</h3>
-                        <p class="text-sm text-gray-400">IN CINEMAS 29TH NOVEMBER</p>
-                        <div class="flex mt-2 space-x-4">
-                            <button class="flex items-center space-x-1 text-sm">
-                                <span class="bg-black material-icons">play_circle</span>
-                                <span>WATCH TRAILER</span>
-                            </button>
-                            <button class="flex items-center space-x-1 text-sm">
-                                <span class=" bg-black material-icons">info</span>
-                                <span>MORE INFO</span>
-                            </button>
-                        </div>
-                    </div>
-
-
-                    <div class="min-w-full md:min-w-1/5   items-center bg-white p-4 rounded-lg mx-2">
-                        <img src="./assets/img/img9.jpg" alt="Moana 2" class="w-full h-64 object-cover rounded-lg mb-4">
-                        <h3 class="text-xl font-bold">MOANA 2</h3>
-                        <p class="text-sm text-gray-400">IN CINEMAS 29TH NOVEMBER</p>
-                        <div class="flex mt-2 space-x-4">
-                            <button class="flex items-center space-x-1 text-sm">
-                                <span class="bg-black material-icons">play_circle</span>
-                                <span>WATCH TRAILER</span>
-                            </button>
-                            <button class="flex items-center space-x-1 text-sm">
-                                <span class="bg-black material-icons">info</span>
-                                <span>MORE INFO</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!--Additional Slides--> 
-                    <!--Add additional slides similarly for the remaining movies--> 
                 </div>
 
-                <!--Coming Soon Slider Controls--> 
-                <button id="comingSoonPrev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 bg-opacity-60 hover:bg-opacity-80 text-white rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110">
-                    <span class="material-icons">chevron_left</span>
-                </button>
-                <button id="comingSoonNext" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 bg-opacity-60 hover:bg-opacity-80 text-white rounded-full p-3 shadow-lg transition-transform duration-200 hover:scale-110">
-                    <span class=" material-icons">chevron_right</span>
-                </button>
+                <!-- Smaller Cards -->
+                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img-4.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-2xl font-bold">Movie Name</h4>
+                        <h2 class="text-md font-bold mb-2">English . Action</h2>
+
+                        <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
+                            Book Tickets
+                        </button>
+                        <button class="bg-transparent text-white border border-white px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
+                            Watch Trailer
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img-2.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-2xl font-bold">Movie Name</h4>
+                        <h2 class="text-md font-bold mb-2">English . Action</h2>
+
+                        <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
+                            Book Tickets
+                        </button>
+                        <button class="bg-transparent text-white border border-white px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
+                            Watch Trailer
+                        </button>
+                    </div>
+                </div>
+
+                <!-- New Smaller Boxes -->
+                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img-5.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-2xl font-bold">Movie Name</h4>
+                        <h2 class="text-md font-bold mb-2">English . Action</h2>
+
+                        <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
+                            Book Tickets
+                        </button>
+                        <button class="bg-transparent text-white border border-white px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
+                            Watch Trailer
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img-6.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-2xl font-bold">Movie Name</h4>
+                        <h2 class="text-md font-bold mb-2">English . Action</h2>
+
+                        <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
+                            Book Tickets
+                        </button>
+                        <button class="bg-transparent text-white border border-white px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
+                            Watch Trailer
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img-7.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-2xl font-bold">Movie Name</h4>
+                        <h2 class="text-md font-bold mb-2">English . Action</h2>
+
+                        <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
+                            Book Tickets
+                        </button>
+                        <button class="bg-transparent text-white border border-white px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
+                            Watch Trailer
+                        </button>
+                    </div>
+                </div>
             </div>
+
         </section>
-    </section>
 
-    <!-- JavaScript for Carousels -->
-    <script src="./js/carousel.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <%@include file="./components/footer.jsp" %>
 
-</body>
+        <!-- JavaScript for Carousels -->
+        <script src="./js/carousel.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    </body>
 </html>
 
