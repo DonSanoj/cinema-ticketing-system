@@ -41,7 +41,7 @@
 
         <!-- Mobile Menu Icon (Hamburger) -->
         <i class="bx bx-menu text-2xl text-gray-600 md:hidden cursor-pointer" id="mobile-menu-icon"></i>
-        <a href="cinema-ticketing-system/register">
+        <a href="register.jsp">
             <i class="bx bx-user text-2xl text-white hover:text-[#eee] cursor-pointer bg-black p-2 rounded-full"></i>
         </a>
     </div>
