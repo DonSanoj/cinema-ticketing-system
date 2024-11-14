@@ -32,6 +32,7 @@
                     </div>
                     <h2 class="text-2xl font-semibold mb-6 text-center md:text-left">Welcome Back!</h2> 
 
+                    <!--add form-->
                     <form class="space-y-4">
                         <div>
                             <label for="email" class="block text-sm text-gray-400 mb-1.5">Email Address</label>
@@ -59,14 +60,17 @@
                             <input type="password" id="confirm-password" required class="w-full h-9 p-2.5 bg-zinc-800 text-black rounded-lg border border-zinc-500 focus:outline-none focus:ring-1 focus:ring-white">
                         </div>
 
-                        <button type="submit" class="w-56  p-3 bg-white text-sm text-black h-11 rounded-3xl items-center focus:outline-none">
+                        <button 
+                            type="submit" 
+                            class="w-56  p-3 bg-white text-sm text-black h-11 rounded-3xl items-center focus:outline-none"
+                            >
                             Continue
                         </button>
                     </form>
                 </div>
             </div>
         </div>
-        
+
         <script src="./js/register.js"></script>
     </body>
 </html>
