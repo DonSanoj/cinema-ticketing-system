@@ -28,7 +28,7 @@
                 <!-- Right Panel (Login Form) -->
                 <div class="p-8 md:w-2/3 bg-black text-white flex flex-col rounded-br-lg rounded-bl-lg md:rounded-tr-lg md:rounded-br-lg">
                     <div class="text-right text-sm mb-4">
-                        <p>Already have an account? <a href="index.html" class="text-gray-400 hover:text-gray-300">Login Now</a></p>
+                        <p>Already have an account? <a href="Login.jsp" class="text-gray-400 hover:text-gray-300">Login Now</a></p>
                     </div>
                     <h2 class="text-2xl font-semibold mb-6 text-center md:text-left">Welcome Back!</h2> 
 
