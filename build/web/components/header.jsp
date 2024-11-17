@@ -13,12 +13,14 @@
 <header class="bg-white flex justify-between items-center p-2 px-4 md:px-8 shadow-lg w-full fixed z-10 relative mb-4">
     <!-- Logo Section -->
     <div class="flex items-center">
-        <img src="./assets/img/logo.png" alt="ABCLogo" class="w-18 h-16 p-1" />
+        <a href="/cinema-ticketing-system">
+            <img src="./assets/img/logo.png" alt="ABCLogo" class="w-18 h-16 p-1" />
+        </a>
     </div>
 
     <!-- Navigation Links and Search (Hidden on mobile by default) -->
     <nav class="hidden md:flex space-x-8 items-center justify-between">
-        <a href="/abc-cinema" class="text-gray-700 hover:text-blue-600 font-medium" data-page="home">Home</a>
+        <a href="/cinema-ticketing-system" class="text-gray-700 hover:text-blue-600 font-medium" data-page="home">Home</a>
         <a href="/abc-cinema/movies" class="text-gray-700 hover:text-blue-600 font-medium" data-page="movies">Movies</a>
         <a href="/abc-cinema/about" class="text-gray-700 hover:text-blue-600 font-medium" data-page="about">About</a>
         <a href="/abc-cinema/contact" class="text-gray-700 hover:text-blue-600 font-medium" data-page="contact">Contact</a>
@@ -41,7 +43,7 @@
 
         <!-- Mobile Menu Icon (Hamburger) -->
         <i class="bx bx-menu text-2xl text-gray-600 md:hidden cursor-pointer" id="mobile-menu-icon"></i>
-        <a href="register.jsp">
+        <a href="login.jsp">
             <i class="bx bx-user text-2xl text-white hover:text-[#eee] cursor-pointer bg-black p-2 rounded-full"></i>
         </a>
     </div>
