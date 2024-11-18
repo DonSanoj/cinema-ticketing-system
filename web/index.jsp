@@ -131,15 +131,15 @@
                 </div>
                 <!-- Button Group -->
                 <div class="flex space-x-4">
-                    <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-600 hover:text-white transition duration-300">
+                    <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-blue-500 hover:text-white transition duration-300">
                         GENRE
                         <i class='bx bx-chevron-down'></i>
                     </button>
-                    <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-600 hover:text-white transition duration-300">
+                    <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-blue-500 hover:text-white transition duration-300">
                         FORMAT
                         <i class='bx bx-chevron-down'></i>
                     </button>
-                    <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-600 hover:text-white transition duration-300">
+                    <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-blue-500 hover:text-white transition duration-300">
                         LANGUAGE
                         <i class='bx bx-chevron-down'></i>
                     </button>

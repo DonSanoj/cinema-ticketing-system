@@ -8,12 +8,13 @@ import com.abc.cinema.dao.UserDAO;
 import com.abc.cinema.model.User;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.sql.Timestamp;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.mindrot.jbcrypt.BCrypt;
 
 /**
  *
@@ -30,19 +31,42 @@ public class RegisterServlet extends HttpServlet {
         String username = req.getParameter("username");
         String phoneNumber = req.getParameter("phoneNumber");
         String password = req.getParameter("password");
-        
-        User user = new User(email, username, phoneNumber, password);
-        
+        String cpassword = req.getParameter("cpassword");
+
+        String userType = "user";
+        Timestamp createdAt = new Timestamp(System.currentTimeMillis());
+
         try {
+            // Check if the email already exists
+            if (UserDAO.emailExists(email)) {
+                // Redirect to registration page with an error message
+                req.setAttribute("errorMessage", "Email is already registered. Please use a different email.");
+                req.getRequestDispatcher("register.jsp").forward(req, res);
+                return;
+            }
+
+            if (!password.equals(cpassword)) {
+                req.setAttribute("errorMessage", "Passwords do not match.");
+                req.getRequestDispatcher("register.jsp").forward(req, res);
+                return;
+            }
+
+            // Hash the password using BCrypt
+            String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+
+            User user = new User(email, username, phoneNumber, hashedPassword, userType, createdAt);
+
             boolean isRegistered = UserDAO.registerUser(user);
             if (isRegistered) {
                 res.sendRedirect("login.jsp");
             } else {
-                res.sendRedirect("register.jsp");
+                req.setAttribute("errorMessage", "Registration failed. Please try again.");
+                req.getRequestDispatcher("register.jsp").forward(req, res);
             }
         } catch (Exception e) {
             e.printStackTrace();
-            res.sendRedirect("/register.jsp");
+            req.setAttribute("errorMessage", "An error occurred during registration. Please try again later.");
+            req.getRequestDispatcher("register.jsp").forward(req, res);
         }
     }
 }
