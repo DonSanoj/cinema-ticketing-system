@@ -38,7 +38,7 @@
                     </div>
                     <h2 class="text-2xl font-semibold mb-6 text-center md:text-left">Create an Account</h2>
 
-                    <form class="space-y-4" action="RegisterServlet" method="post">
+                    <form class="space-y-4" action="register" method="post">
                         <div>
                             <label for="email" class="block text-sm text-black mb-1.5"> 
                                 <strong class="text-red-500">*</strong> Email Address

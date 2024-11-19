@@ -48,7 +48,7 @@
                     </div>
 
 
-                    <form class="space-y-4" action="LoginServlet" method="post">
+                    <form class="space-y-4" action="login" method="post">
                         <div>
                             <label for="email" class="block text-sm text-gray-400 mb-1.5">
                                 <strong class="text-red-500">*</strong> Email Address

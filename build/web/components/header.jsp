@@ -11,7 +11,7 @@
 
 <!-- header.jsp -->
 <header class="bg-white flex justify-between items-center p-2 px-4 md:px-8 shadow-lg w-full fixed z-10 relative mb-4">
-    <!-- Logo Section -->
+
     <div class="flex items-center">
         <a href="/abc-cinema">
             <img src="./assets/img/logo.png" alt="ABCLogo" class="w-18 h-16 p-1" />
@@ -58,12 +58,12 @@
 </div>
 
 <script>
-    // Mobile Menu Toggle using Tailwind's 'hidden' class
+
     const menuIcon = document.getElementById('mobile-menu-icon');
     const mobileMenu = document.getElementById('mobile-menu');
 
     menuIcon.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden'); // Toggle the visibility of the mobile menu
+        mobileMenu.classList.toggle('hidden');
     });
 
     // Set the underline based on the current page
@@ -73,12 +73,12 @@
 
         links.forEach(link => {
             const page = link.getAttribute('data-page');
-            // Check if the current URL matches the link's page
+
             if (currentPage.includes(page)) {
-                link.classList.add('underline'); // Add the underline class
-                link.classList.add('text-blue-600'); // Optional: change the color when active
+                link.classList.add('underline');
+                link.classList.add('text-blue-600');
             } else {
-                link.classList.remove('underline'); // Remove the underline if it's not the current page
+                link.classList.remove('underline');
             }
         });
     });
