@@ -5,7 +5,11 @@
         <group>
             <file>file:/C:/Users/DON/Documents/NSBM/DLE/Java%20Group%20Project/cinema-ticketing-system/web/register.jsp</file>
             <file>file:/C:/Users/DON/Documents/NSBM/DLE/Java%20Group%20Project/cinema-ticketing-system/src/java/com/abc/cinema/controller/RegisterServlet.java</file>
+            <file>file:/C:/Users/DON/Documents/NSBM/DLE/Java%20Group%20Project/cinema-ticketing-system/web/index.jsp</file>
+            <file>file:/C:/Users/DON/Documents/NSBM/DLE/Java%20Group%20Project/cinema-ticketing-system/web/components/header.jsp</file>
             <file>file:/C:/Users/DON/Documents/NSBM/DLE/Java%20Group%20Project/cinema-ticketing-system/src/java/com/abc/cinema/dao/UserDAO.java</file>
+            <file>file:/C:/Users/DON/Documents/NSBM/DLE/Java%20Group%20Project/cinema-ticketing-system/web/login.jsp</file>
+            <file>file:/C:/Users/DON/Documents/NSBM/DLE/Java%20Group%20Project/cinema-ticketing-system/src/java/com/abc/cinema/controller/LoginServlet.java</file>
         </group>
     </open-files>
 </project-private>
