@@ -15,8 +15,40 @@
         <title>ABC Cinema</title>
 
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <style>
+            /* Ensure dropdown is hidden initially */
+            .relative .dropdown-menu {
+                display: none;
+            }
+
+            /* Show dropdown on hover */
+            .relative:hover .dropdown-menu {
+                display: block;
+            }
+
+            /* Optional: Ensure dropdown overlaps correctly */
+            .dropdown-menu {
+                position: absolute;
+                z-index: 10;
+            }
+         </style>
+         <style>
+            /* Card styling */
+            .movie-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border-radius: 8px;
+            }
+
+            /* Hover effect */
+            .movie-card:hover {
+                transform: translateY(-10px) scale(1.05);
+                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+            }
+          </style>
+         
     </head>
     <body class="bg-gray-100">
 
@@ -35,8 +67,8 @@
                 autoplay-disable-on-interaction="false"
                 >
                 <swiper-slide class="flex items-center justify-center text-center text-lg bg-black relative rounded-xl">
-                    <div class="px-12 w-full h-full">
-                        <img src="./assets/img/img 1.jpg" alt="carousel-img1" class="w-full h-full object-cover rounded-lg"/>
+                    <div class="px-12 w- h-69">
+                        <img src="./assets/img/77.jpg" alt="carousel-img1" class="w-full h-full object-cover rounded-lg"/>
 
                         <!-- Text and buttons positioned in the top-left corner -->
                         <div class="absolute bottom-2 left-4 p-4 space-y-2">
@@ -58,9 +90,11 @@
                         </div>
                     </div>
                 </swiper-slide>
+                
+                <!--swiper-slide-->
 
                 <swiper-slide class="flex items-center justify-center text-center text-lg bg-black relative rounded-xl">
-                    <div class="px-12 w-full h-full">
+                    <div class="px-12 w-full h-69">
                         <img src="./assets/img/img-2.jpg" alt="carousel-img2" class="w-full h-full object-cover rounded-lg"/>
 
                         <!-- Text and buttons positioned in the top-left corner -->
@@ -85,7 +119,7 @@
                 </swiper-slide>
 
                 <swiper-slide class="flex items-center justify-center text-center text-lg bg-black relative rounded-xl">
-                    <div class="px-12 w-full h-full">
+                    <div class="px-12 w-full h-69">
                         <img src="./assets/img/img-3.jpg" alt="carousel-img1" class="w-full h-full object-cover rounded-lg"/>
 
                         <!-- Text and buttons positioned in the top-left corner -->
@@ -120,35 +154,98 @@
         </section>
 
         <hr class="w-11/12 h-0.5 bg-gray-700 mx-auto">
+           
+        <style>
+            .bg-custom-blue {
+                background-color: #000025;
+            }
+            /* Mouseover pop animation for cards */
+            .movie-card {
+                transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+            }
 
+            .movie-card:hover {
+                transform: scale(1.1);
+                box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+            }
+
+               
+        </style>
+        
         <!--Now Showing Section-->
-        <section class="bg-black text-white mt-6">
+        <section class="bg-custom-blue text-white mt-6">
 
             <div class="p-4 flex items-center justify-between rounded-lg shadow-md">
                 <!-- Title Section -->
                 <div class=" py-4 px-6 rounded-lg shadow-lg">
                     <h2 class="text-3xl text-white font-bold text-center">Now Showing</h2>
                 </div>
-                <!-- Button Group -->
-                <div class="flex space-x-4">
-                    <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-blue-500 hover:text-white transition duration-300">
-                        GENRE
-                        <i class='bx bx-chevron-down'></i>
-                    </button>
-                    <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-blue-500 hover:text-white transition duration-300">
-                        FORMAT
-                        <i class='bx bx-chevron-down'></i>
-                    </button>
-                    <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-blue-500 hover:text-white transition duration-300">
-                        LANGUAGE
-                        <i class='bx bx-chevron-down'></i>
-                    </button>
+                <!-- Button Group with Dropdown Menus -->
+                <div class="flex space-x-4 relative">
+                    <!-- GENRE Dropdown -->
+                        <div class="relative">
+                            <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-600 hover:text-white transition duration-300">
+                                GENRE
+                                <i class='bx bx-chevron-down'></i>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div class="dropdown-menu mt-2 w-40 bg-white rounded-lg shadow-lg">
+                                <ul class="py-2 text-sm text-gray-700">
+                                    <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">Action</li>
+                                    <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">Comedy</li>
+                                    <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">Drama</li>
+                                    <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">Horror</li>
+                                    <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">Sci-Fi</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    <!-- FORMAT Dropdown -->
+                    <div class="relative">
+                        <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-600 hover:text-white transition duration-300">
+                            FORMAT
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg hidden group-hover:block z-10">
+                            <ul class="py-2 text-sm text-gray-700">
+                                <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">3D</li>
+                                <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">2D</li>
+                                <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">4K</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- LANGUAGE Dropdown -->
+                    <div class="relative">
+                        <button class="px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-600 hover:text-white transition duration-300">
+                            LANGUAGE
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg hidden group-hover:block z-10">
+                            <ul class="py-2 text-sm text-gray-700">
+                                <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">English</li>
+                                <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">Spanish</li>
+                                <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">French</li>
+                                <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">German</li>
+                                <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer">Chinese</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+                <style>
+                /* Show dropdown on hover */
+                .relative:hover .group-hover\\:block {
+                    display: block;
+                }
+                </style>
+
             </div>
 
             <div class="bg-black container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 p-4">
                 <!-- Large Card -->
-                <div class="col-span-2 row-span-2 bg-gray-800 rounded-lg relative h-64 md:h-full shadow-lg hover:scale-105 transition-transform duration-300">
+                <div class="movie-card col-span-2 row-span-2 bg-gray-800 rounded-lg relative h-64 md:h-full shadow-lg hover:scale-105 transition-transform duration-300">
                     <img src="./assets/img/img 1.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-3xl font-bold">Movie Name</h4>
@@ -164,7 +261,7 @@
                 </div>
 
                 <!-- Smaller Cards -->
-                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                <div class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
                     <img src="./assets/img/img-4.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
@@ -179,7 +276,7 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                <div class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
                     <img src="./assets/img/img-2.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
@@ -195,7 +292,7 @@
                 </div>
 
                 <!-- New Smaller Boxes -->
-                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                <div class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
                     <img src="./assets/img/img-5.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
@@ -210,7 +307,7 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                <div class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
                     <img src="./assets/img/img-6.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
@@ -225,7 +322,7 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                <div class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
                     <img src="./assets/img/img-7.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
@@ -240,23 +337,21 @@
                     </div>
                 </div>
             </div>
-
         </section>
-
         <!--Coming Soon Section--> 
-        <section class="bg-black text-white mt-6 mb-10">
+        <section class="bg-custom-blue text-white ">
 
             <div class="p-4 flex items-center justify-between rounded-lg shadow-md">
                 <!-- Title Section -->
                 <div class=" py-4 px-6 rounded-lg shadow-lg">
-                    <h2 class="text-3xl text-white font-bold text-center">Coming Soon...</h2>
+                    <h2 class="text-3xl text-white font-bold text-center">Coming Soon</h2>
                 </div>
             </div>
 
             <div class="bg-black container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 p-4">
                 <!-- Large Card -->
-                <div class="col-span-2 row-span-2 bg-gray-800 rounded-lg relative h-64 md:h-full shadow-lg hover:scale-105 transition-transform duration-300">
-                    <img src="./assets/img/img 1.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                <div class="movie-card col-span-2 row-span-2 bg-gray-800 rounded-lg relative h-64 md:h-full shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img 1.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-3xl font-bold">Movie Name</h4>
                         <h2 class="text-md font-bold mb-2">English . Action</h2>
@@ -271,7 +366,7 @@
                 </div>
 
                 <!-- Smaller Cards -->
-                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                <div class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
                     <img src="./assets/img/img-4.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
@@ -286,7 +381,7 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                <div class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
                     <img src="./assets/img/img-2.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
@@ -302,7 +397,7 @@
                 </div>
 
                 <!-- New Smaller Boxes -->
-                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                <div class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
                     <img src="./assets/img/img-5.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
@@ -317,7 +412,7 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                <div class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
                     <img src="./assets/img/img-6.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
@@ -332,7 +427,7 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                <div class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
                     <img src="./assets/img/img-7.jpg" alt="Movie" class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                     <div class="absolute bottom-4 left-4 text-white">
                         <h4 class="text-2xl font-bold">Movie Name</h4>
@@ -355,7 +450,27 @@
         <!-- JavaScript for Carousels -->
         <script src="./js/carousel.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <script>
+            document.querySelectorAll('.relative > button').forEach(button => {
+            button.addEventListener('click', function () {
+                const menu = this.nextElementSibling;
+                const isVisible = menu.style.display === 'block';
+                // Hide all other dropdowns
+                document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
+                // Toggle the current dropdown
+                menu.style.display = isVisible ? 'none' : 'block';
+            });
+        });
+
+        // Close dropdowns on outside click
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.relative')) {
+                document.querySelectorAll('.dropdown-menu').forEach(menu => menu.style.display = 'none');
+            }
+        });
+        </script>
+            
+            
 
     </body>
 </html>
-
