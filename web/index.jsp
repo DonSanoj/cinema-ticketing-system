@@ -68,7 +68,7 @@
                 >
                 <swiper-slide class="flex items-center justify-center text-center text-lg bg-black relative rounded-xl">
                     <div class="px-12 w- h-69">
-                        <img src="./assets/img/77.jpg" alt="carousel-img1" class="w-full h-full object-cover rounded-lg"/>
+                        <img src="./assets/img/img 1.jpg" alt="carousel-img1" class="w-full h-full object-cover rounded-lg"/>
 
                         <!-- Text and buttons positioned in the top-left corner -->
                         <div class="absolute bottom-2 left-4 p-4 space-y-2">
