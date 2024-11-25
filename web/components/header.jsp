@@ -23,7 +23,7 @@
         <a href="/abc-cinema" class="text-gray-700 hover:text-blue-600 font-medium" data-page="home">Home</a>
         <a href="/abc-cinema/movies" class="text-gray-700 hover:text-blue-600 font-medium" data-page="movies">Movies</a>
         <a href="/abc-cinema/about" class="text-gray-700 hover:text-blue-600 font-medium" data-page="about">About</a>
-        <a href="/abc-cinema/contact" class="text-gray-700 hover:text-blue-600 font-medium" data-page="contact">Contact</a>
+        <a href="/abc-cinema/contactUs.jsp" class="text-gray-700 hover:text-blue-600 font-medium" data-page="contact">Contact</a>
     </nav>
 
     <!-- User Icon and Mobile Menu Icon (Hamburger) -->
