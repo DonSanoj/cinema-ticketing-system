@@ -357,7 +357,9 @@
                         <h2 class="text-md font-bold mb-2">English . Action</h2>
 
                         <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
-                            Show Info
+                            <a href="./movieDetails.jsp">
+                                Show Info
+                            </a>
                         </button>
                         <button class="bg-transparent text-white border border-white px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition duration-300">
                             Watch Trailer
