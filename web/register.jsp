@@ -17,11 +17,11 @@
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
     </head>
-    <body>
+    <body class="bg-[#eee]">
 
         <%@include file="./components/header.jsp" %>
 
-        <div class=" flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 bg-[#eee]">
+        <div class=" flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 bg-[#eee] mb-6">
 
             <div class="flex flex-col md:flex-row bg-white shadow-lg rounded-xl w-full max-w-4xl overflow-hidden">
                 <!-- Left Panel -->
@@ -38,7 +38,10 @@
                     </div>
                     <h2 class="text-2xl font-semibold mb-6 text-center md:text-left">Create an Account</h2>
 
-                    <form class="space-y-4" action="register" method="post">
+                    <form class="space-y-4" action="customerAuth" method="post">
+
+                        <input type="hidden" name="action" value="register">
+
                         <div>
                             <label for="email" class="block text-sm text-black mb-1.5"> 
                                 <strong class="text-red-500">*</strong> Email Address
@@ -53,13 +56,13 @@
                         </div>
 
                         <div>
-                            <label for="username" class="block text-sm text-black mb-1.5">
+                            <label for="customername" class="block text-sm text-black mb-1.5">
                                 <strong class="text-red-500">*</strong> User Name
                             </label>
                             <input 
                                 type="text" 
-                                id="username" 
-                                name="username" 
+                                id="customername" 
+                                name="customername" 
                                 required 
                                 class="w-full h-9 p-2.5 bg-zinc-800 text-blacak rounded-lg border border-zinc-500 focus:outline-none focus:ring-1 focus:ring-white"
                                 >
@@ -119,7 +122,10 @@
 
         <%@include file="./components/footer.jsp" %>
 
-        <script src="./js/register.js"></script>
+        <!--<script src="./js/register.js"></script>-->
+        <script src="./js/searchResult.js"></script>
+        <script src="./js/footer.js"></script>
+
         <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 
         <script>
