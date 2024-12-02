@@ -4,8 +4,16 @@
         <servlet-name>CustomerAuthServlet</servlet-name>
         <servlet-class>com.abc.cinema.controllers.CustomerAuthServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>com.abc.cinema.controllers.AdminLoginServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CustomerAuthServlet</servlet-name>
         <url-pattern>/CustomerAuthServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/AdminLoginServlet</url-pattern>
     </servlet-mapping>
 </web-app>
