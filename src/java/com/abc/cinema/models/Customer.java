@@ -2,38 +2,43 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.abc.cinema.model;
+package com.abc.cinema.models;
 
 import java.sql.Timestamp;
 
 /**
  *
- * @author DON
+ * @author Shayan
  */
-public class User {
+public class Customer {
 
-    private String email;
-    private String username;
-    private String phoneNumber;
-    private String password;
-    private String userType;
-    private Timestamp createdAt;
+    private final int customer_id;
+    private final String email;
+    private final String customer_name;
+    private final String phoneNumber;
+    private final String password;
+    private final Timestamp createdAt;
 
-    public User(String email, String username, String phoneNumber, String password, String userType, Timestamp createdAt) {
+    public Customer(int customer_id, String email, String customer_name, String phoneNumber, String password, Timestamp createdAt) {
+
+        this.customer_id = customer_id;
         this.email = email;
-        this.username = username;
+        this.customer_name = customer_name;
         this.phoneNumber = phoneNumber;
         this.password = password;
-        this.userType = userType;
         this.createdAt = createdAt;
+    }
+
+    public int getCustomerId() {
+        return customer_id;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public String getUsername() {
-        return username;
+    public String getCustomername() {
+        return customer_name;
     }
 
     public String getPhoneNumber() {
@@ -42,10 +47,6 @@ public class User {
 
     public String getPassword() {
         return password;
-    }
-
-    public String getUserType() {
-        return userType;
     }
 
     public Timestamp getCreatedAt() {
