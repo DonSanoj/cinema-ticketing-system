@@ -95,6 +95,44 @@
             </div>
         </section>
 
+        <section class="bg-white py-16">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">Meet Our Team</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <img src="photos[=/Frame 874.png" alt="Tom Cruise" class="rounded-full mx-auto shadow-lg">
+                        <h3 class="text-xl font-bold mt-4">Tom Cruise</h3>
+                        <p>Founder & Chairman</p>
+                        <div class="flex justify-center space-x-4 mt-2">
+                            <a href="https://www.instagram.com/pamith__?igsh=bTUwbmoyeHhob3gz&utm_source=qr " class="text-gray-600"><img src="photos[=/icon-instagram.png" alt=""><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-600"><i class="fab fa-instagram"></i><img src="photos[=/Icon-Linkedin.png" alt=""></a>
+                            <a href="#" class="text-gray-600"><i class="fab fa-linkedin"></i><img src="photos[=/Icon-Twitter.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="photos[=/Frame 875.png" alt="Emma Watson" class="rounded-full mx-auto shadow-lg">
+                        <h3 class="text-xl font-bold mt-4">Emma Watson</h3>
+                        <p>Managing Director</p>
+                        <div class="flex justify-center space-x-4 mt-2">
+                            <a href="https://www.instagram.com/pamith__?igsh=bTUwbmoyeHhob3gz&utm_source=qr " class="text-gray-600"><img src="photos[=/icon-instagram.png" alt=""><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-600"><i class="fab fa-instagram"></i><img src="photos[=/Icon-Linkedin.png" alt=""></a>
+                            <a href="#" class="text-gray-600"><i class="fab fa-linkedin"></i><img src="photos[=/Icon-Twitter.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="photos[=/Frame 876.png" alt="Will Smith" class="rounded-full mx-auto shadow-lg">
+                        <h3 class="text-xl font-bold mt-4">Will Smith</h3>
+                        <p>Product Designer</p>
+                        <div class="flex justify-center space-x-4 mt-2">
+                            <a href="https://www.instagram.com/pamith__?igsh=bTUwbmoyeHhob3gz&utm_source=qr " class="text-gray-600"><img src="photos[=/icon-instagram.png" alt=""><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-600"><i class="fab fa-instagram"></i><img src="photos[=/Icon-Linkedin.png" alt=""></a>
+                            <a href="#" class="text-gray-600"><i class="fab fa-linkedin"></i><img src="photos[=/Icon-Twitter.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <%@include file="./components/footer.jsp" %>
 
     </body>
