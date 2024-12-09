@@ -148,5 +148,136 @@
             </div>
         </section>
 
+        <!--Coming soon section-->
+        <section class="bg-[#eee] text-black mb-6">
+
+            <div class="p-4 flex items-center justify-between rounded-lg">
+
+                <div class=" py-2 px-6">
+                    <h2 class="text-3xl text-black font-bold text-center">Coming Soon...</h2>
+                </div>
+            </div>
+
+            <div class="bg-[#eee] container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 p-4">
+
+                <div
+                    class="movie-card col-span-2 row-span-2 bg-gray-800 rounded-lg relative h-64 md:h-full shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img_1.jpg" alt="Movie"
+                         class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-3xl font-bold">Movie Name</h4>
+                        <h2 class="text-md font-bold mb-2">English ● Action</h2>
+
+                        <button
+                            class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition duration-300">
+                            <a href="./movieDetails.jsp">
+                                Show Info
+                            </a>
+                        </button>
+                        <button
+                            class="bg-transparent text-white border border-white px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition duration-300">
+                            Watch Trailer
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img_1.jpg" alt="Movie"
+                         class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-2xl font-bold">Movie Name</h4>
+                        <h2 class="text-md font-bold mb-2">English ● Action</h2>
+
+                        <button
+                            class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition duration-300">
+                            Show Info
+                        </button>
+                        <button
+                            class="bg-transparent text-white border border-white px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition duration-300">
+                            Watch Trailer
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img_1.jpg" alt="Movie"
+                         class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-2xl font-bold">Movie Name</h4>
+                        <h2 class="text-md font-bold mb-2">English ● Action</h2>
+
+                        <button
+                            class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition duration-300">
+                            Show Info
+                        </button>
+                        <button
+                            class="bg-transparent text-white border border-white px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition duration-300">
+                            Watch Trailer
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img_1.jpg" alt="Movie"
+                         class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-2xl font-bold">Movie Name</h4>
+                        <h2 class="text-md font-bold mb-2">English ● Action</h2>
+
+                        <button
+                            class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition duration-300">
+                            Show Info
+                        </button>
+                        <button
+                            class="bg-transparent text-white border border-white px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition duration-300">
+                            Watch Trailer
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img_1.jpg" alt="Movie"
+                         class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-2xl font-bold">Movie Name</h4>
+                        <h2 class="text-md font-bold mb-2">English ● Action</h2>
+
+                        <button
+                            class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition duration-300">
+                            Show Info
+                        </button>
+                        <button
+                            class="bg-transparent text-white border border-white px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition duration-300">
+                            Watch Trailer
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="movie-card bg-gray-800 rounded-lg relative h-32 md:h-48 shadow-lg hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/img/img_1.jpg" alt="Movie"
+                         class="w-full h-full object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-2xl font-bold">Movie Name</h4>
+                        <h2 class="text-md font-bold mb-2">English ● Action</h2>
+
+                        <button
+                            class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition duration-300">
+                            Show Info
+                        </button>
+                        <button
+                            class="bg-transparent text-white border border-white px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition duration-300">
+                            Watch Trailer
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
     </body>
 </html>
