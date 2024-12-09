@@ -21,6 +21,8 @@
 
     </head>
     <body class="bg-gray-100">
+        
+        <%@include file="./components/header.jsp" %>
 
         <section class="bg-black text-white mt-6 mb-6">
 
@@ -278,6 +280,11 @@
             </div>
 
         </section>
+        
+        <%@include file="./components/footer.jsp" %>
+        
+        <script src="./js/footer.js"></script>
+        <script src="./js/searchResult.js"></script>
 
     </body>
 </html>
