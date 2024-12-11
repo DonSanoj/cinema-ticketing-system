@@ -52,24 +52,4 @@ public class AdminDAO {
         return false;
     }
 
-    // Get admin by email
-    public static Admin getAdminByEmail(String admin_email) throws SQLException {
-        String sql = "SELECT * FROM admins WHERE admin_email = ?";
-        try (Connection connection = DbConnection.getConnection(); PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setString(1, admin_email);
-            ResultSet rs = statement.executeQuery();
-            if (rs.next()) {
-                int admin_id = rs.getInt("admin_id");
-                String admin_name = rs.getString("admin_name");
-                String password = rs.getString("password");
-                String phone_number = rs.getString("phone_number");
-                String admin_type = rs.getString("admin_type");
-                Timestamp created_at = rs.getTimestamp("created_at");
-
-                return new Admin(admin_id, admin_email, admin_name, password, phone_number, admin_type, created_at);
-            }
-        }
-        return null;
-    }
-
 }
