@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const movieDropdown = document.getElementById("movie_id");
 
     // Fetch movies using AJAX
-    fetch("/test-web/Admin/addShowTime")
+    fetch("/abc-cinema/Admin/addShowTime")
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Failed to fetch movies");
