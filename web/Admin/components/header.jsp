@@ -56,14 +56,14 @@
             </div>
 
             <!-- Navigation links -->
-            <a href="/test-web/Admin/admin_dashboard.jsp">Dashboard</a>
-            <a href="/test-web/Admin/add_movies.jsp">Add Movies</a>
-            <a href="/test-web/Admin/manage_all_users.jsp">Manage All Users</a>
-            <a href="/test-web/Admin/add_show_time.jsp">Add Show Time</a>
+            <a href="/abc-cinema/Admin/admin_dashboard.jsp">Dashboard</a>
+            <a href="/abc-cinema/Admin/add_movies.jsp">Add Movies</a>
+            <a href="/abc-cinema/Admin/manage_all_users.jsp">Manage All Users</a>
+            <a href="/abc-cinema/Admin/add_show_time.jsp">Add Show Time</a>
 
             <!-- Logout Button -->
             <div class="logout">
-                <form action="/test-web/logout" method="get">
+                <form action="/abc-cinema/logout" method="get">
                     <button type="submit">Logout</button>
                 </form>
             </div>
