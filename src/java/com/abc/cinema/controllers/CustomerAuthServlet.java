@@ -88,7 +88,7 @@ public class CustomerAuthServlet extends HttpServlet {
                 req.getSession().setAttribute("customer_id", customer.getCustomerId());
                 req.getSession().setAttribute("email", customer.getEmail());
                 req.getSession().setAttribute("customer_name", customer.getCustomername());
-                res.sendRedirect("/test-web");
+                res.sendRedirect("/abc-cinema");
             } else {
                 req.setAttribute("loginErrorMessage", "Invalid email or password. Please try again.");
                 req.getRequestDispatcher("/login.jsp").forward(req, res);
