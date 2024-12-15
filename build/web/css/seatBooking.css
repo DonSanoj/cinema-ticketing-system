@@ -21,6 +21,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* Seat Tooltip - Positioned Above */
 .seat::before {
     content: '';
     position: absolute;
@@ -31,24 +32,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     border-radius: 0.25rem 0.25rem 0 0;
 }
 
+/* Hover Effects */
 .seat:hover {
     transform: scale(1.1);
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
 }
 
-.available {
-    background-color: #27b9e9;
-}
+/* Seat Availability Statuses */
 
-.reserved {
-    background-color: #eb1111df;
-    cursor: not-allowed;
-}
-
-.selected {
-    background-color: #A9A9A9;
-}
-
+/* Screen Styling */
 .screen {
     position: relative;
     width: 80%;
@@ -57,8 +49,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     text-align: center;
     color: white;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
+/* Screen Decorative Line */
 .screen::before {
     content: '';
     position: absolute;
@@ -69,4 +63,68 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     border-top: 4px solid #ffffff;
     border-radius: 50% / 100px;
     transform: translateY(-50%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .seat {
+        width: 2.5rem;
+        height: 1.5rem;
+    }
+
+    .screen {
+        width: 90%;
+        font-size: 1rem;
+    }
+}
+
+/* Flexbox Layout for Seat Grid */
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+/* Center Screen for All Viewports */
+.screen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Visible class to show modal */
+.modal-overlay.visible {
+    display: flex;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px; /* 1.5rem */
+    width: 384px; /* 24rem */
+}
+
+/* Buttons */
+button {
+    padding: 8px 16px; /* 0.5rem 1rem */
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
 }
