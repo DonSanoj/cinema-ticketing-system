@@ -23,81 +23,83 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./assets/img/logo_white.png" type="image/x-icon">
         <title>Admin and Customer Management</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 20px;
-            }
-            h1 {
-                text-align: center;
-            }
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                margin-bottom: 30px;
-            }
-            table, th, td {
-                border: 1px solid black;
-            }
-            th, td {
-                padding: 10px;
-                text-align: left;
-            }
-            .no-data {
-                text-align: center;
-                font-style: italic;
-                color: #888;
-            }
-            .error-message {
-                color: red;
-                text-align: center;
-                margin-top: 20px;
-            }
-        </style>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+
     </head>
     <body>
-        <h1>Admin and Customer Management</h1>
+        
+        <%@include file="./components/header.jsp" %>
 
-        <div class="error-message"></div> <!-- Display error messages if any -->
 
-        <!-- Moderators Section -->
-        <h2>Moderators</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Moderator ID</th>
-                    <th>Email</th>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>Type</th>
-                    <th>Created At</th>
-                </tr>
-            </thead>
-            <tbody id="moderators-list">
-                <!-- Moderator data will be dynamically inserted here -->
-            </tbody>
-        </table>
+        <h2 class="text-2xl font-semibold text-center text-gray-700 mb-10">Moderators</h2>
+            
+            <div class="overflow-x-auto bg-white shadow-md rounded-lg mb-10">
 
-        <!-- Customers Section -->
-        <h2>Customers</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Customer ID</th>
-                    <th>Email</th>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>Created At</th>
-                </tr>
-            </thead>
-            <tbody id="customers-list">
-                <!-- Customer data will be dynamically inserted here -->
-            </tbody>
-        </table>
+                <table class="min-w-full divide-y divide-gray-200">
 
-        <!-- Include the external JavaScript file -->
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Moderator ID</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Created At</th>
+                    </tr>
+                  </thead>
+                  
+                   <tbody id="moderators-list" class="divide-y divide-gray-200">
+                       
+                   </tbody>
+
+                </table>
+
+            </div>
+
+
+        <h2 class="text-2xl font-semibold text-center text-gray-700 mt-10 mb-10">Customers</h2>
+        
+            <div class="overflow-x-auto bg-white shadow-md rounded-lg">
+
+                <table class="min-w-full divide-y divide-gray-200">
+
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Customer ID</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Created At</th>
+                    </tr>
+                  </thead>
+                  
+                  <tbody id="customers-list"  class="bg-white divide-y divide-gray-200">
+                     
+                  </tbody>
+
+                </table>
+
+            </div>
+        
+        <div class="error-message text-red-500 text-center mb-6"></div>
+
         <script src="./js/manage_all_users.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>        
+            alertify.set('notifier', 'position', 'top-center')
+            <% if (request.getAttribute("successMessage") != null) {%>
+            alertify.success("<%= request.getAttribute("successMessage")%>");
+            <% }%>
+
+            <% if (request.getAttribute("errorMessage") != null) {%>
+            alertify.error("<%= request.getAttribute("errorMessage")%>");
+            <% }%>
+        </script>
     </body>
 </html>

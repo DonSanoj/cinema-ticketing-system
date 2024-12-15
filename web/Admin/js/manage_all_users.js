@@ -6,55 +6,44 @@ $(document).ready(function () {
         headers: {"X-Requested-With": "XMLHttpRequest"},
         dataType: 'json',
         success: function (data) {
-            console.log('Full Data Object:', data); // Log the entire data object to check the structure
-
-            // Clear previous content in case of any prior data
-            $('#moderators-list').empty();
-            $('#customers-list').empty();
-
-            // Display moderators data in table rows
+            // Display moderators data
             if (data.moderators && data.moderators.length > 0) {
                 data.moderators.forEach(function (admin) {
-                    // Dynamically create table row for each moderator and append it
                     $('#moderators-list').append(`
-                        <tr>
-                            <td>${admin.admin_id}</td>
-                            <td>${admin.admin_email}</td>
-                            <td>${admin.admin_name}</td>
-                            <td>${admin.phone_number}</td>
-                            <td>${admin.admin_type}</td>
-                            <td>${admin.created_at}</td>
-                        </tr>
+                    <tr>
+                      <td class="px-6 py-4 text-sm font-medium text-gray-900">${admin.admin_id}</td>
+                      <td class="px-6 py-4 text-sm font-medium text-gray-900">${admin.admin_email}</td>
+                      <td class="px-6 py-4 text-sm text-gray-900">${admin.admin_name}</td>
+                      <td class="px-6 py-4 text-sm text-gray-900">${admin.phone_number}</td>
+                      <td class="px-6 py-4 text-sm text-gray-900">${admin.admin_type}</td>
+                      <td class="px-6 py-4 text-sm text-gray-900">${admin.created_at}</td>
+                    </tr>
                     `);
                 });
             } else {
-                // Append message if no moderators found
-                $('#moderators-list').append('<tr><td colspan="6" class="no-data">No moderators found.</td></tr>');
+                $('#moderators-list').append('<tr><div class="bg-blue-500 text-white p-4">Tailwind Test</div></tr>');
             }
 
-            // Display customers data in table rows
+            // Display customers data
             if (data.customers && data.customers.length > 0) {
                 data.customers.forEach(function (customer) {
-                    // Dynamically create table row for each customer and append it
-                    $('#customers-list').append(`
-                        <tr>
-                            <td>${customer.customer_id}</td>
-                            <td>${customer.email}</td>
-                            <td>${customer.customer_name}</td>
-                            <td>${customer.phone_number}</td>
-                            <td>${customer.created_at}</td>
+                    $('#customers-list').append(`                    
+                        <tr class="divide-y divide-gray-200">
+                            <td class="px-6 py-4 text-sm font-medium text-gray-900">${customer.customer_id}</td>
+                            <td class="px-6 py-4 text-sm font-medium text-gray-900">${customer.email}</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">${customer.customer_name}</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">${customer.phone_number}</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">${customer.created_at}</td>
                         </tr>
                     `);
                 });
             } else {
-                // Append message if no customers found
-                $('#customers-list').append('<tr><td colspan="4" class="no-data">No customers found.</td></tr>');
+                $('#customers-list').append('<tr><td colspan="5" class="no-data">No customers found.</td></tr>');
             }
         },
         error: function (xhr, status, error) {
             console.error('Error fetching data:', error);
             $('.error-message').text('Failed to fetch data. Error: ' + error);
-            console.error('XHR Response:', xhr.responseText);
         }
     });
 });
