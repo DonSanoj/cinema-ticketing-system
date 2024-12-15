@@ -9,9 +9,9 @@ $(document).ready(function () {
     const movieId = new URLSearchParams(window.location.search).get('movie_id');
 
     if (movieId) {
-        // Make an AJAX GET request to fetch showtimes
+        
         $.ajax({
-            url: '/test-web/moviesessions/movie-session',
+            url: '/abc-cinema/moviesessions/movie-session',
             type: 'GET',
             headers: {"X-Requested-With": "XMLHttpRequest"},
             data: {movie_id: movieId},
@@ -43,8 +43,8 @@ $(document).ready(function () {
                 }
             },
             error: function (xhr, status, error) {
-                console.error('Error fetching showtimes:', error); // Log error
-                console.error('Response Text:', xhr.responseText); // Log server response
+                console.error('Error fetching showtimes:', error); 
+                console.error('Response Text:', xhr.responseText); 
                 $('#showtimes-container').html('<p>Failed to fetch showtimes. Please try again later.</p>');
             }
         });

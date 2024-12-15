@@ -6,7 +6,7 @@ package com.abc.cinema.models;
 
 /**
  *
- * @author Himantha
+ * @author Don
  */
 public class SeatStatus {
 

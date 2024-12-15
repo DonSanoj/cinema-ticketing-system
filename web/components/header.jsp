@@ -15,7 +15,11 @@
 
     <div class="flex items-center">
         <a href="/abc-cinema">
-            <img src="./assets/img/logo_black.png" alt="ABCLogo" class="w-18 h-16 p-1" />
+            <img
+                src="<%= (request.getAttribute("pageType") != null && request.getAttribute("pageType").equals("non-root")) ? "../assets/img/logo_black.png" : "./assets/img/logo_black.png"%>" 
+                alt="ABCLogo" 
+                class="w-18 h-16 p-1" 
+                />
         </a>
     </div>
 
@@ -26,6 +30,7 @@
         <a href="/abc-cinema/aboutUs.jsp" class="text-gray-700 hover:text-blue-600 font-medium" data-page="about">About</a>
         <a href="/abc-cinema/contactUs.jsp" class="text-gray-700 hover:text-blue-600 font-medium"
            data-page="contact">Contact</a>
+        <a href="/abc-cinema/reviews.jsp" class="text-gray-700 hover:text-blue-600 font-medium">Reviews</a>
     </nav>
 
     <!-- User Icon and Mobile Menu Icon (Hamburger) -->
@@ -52,11 +57,36 @@
         <% String customerEmail = (String) session.getAttribute("email"); %>
         <% if (customerEmail != null) {%>
 
-        <a href="/abc-cinema/user">
-            <div class="flex items-center justify-center bg-black text-white text-lg font-semibold w-10 h-10 rounded-full">
+        <div>
+            <button 
+                id="avatarDropdownButton"
+                class="flex items-center justify-center bg-blue-500 text-white text-lg font-semibold w-10 h-10 rounded-full"
+                onclick="toggleDropdown()"
+                >
                 <%= customerEmail.substring(0, 1).toUpperCase()%>
+            </button>
+
+            <div
+                id="avatarDropdownMenu"
+                class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
+                >
+                <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="avatarDropdownButton">
+                    <a 
+                        href="/profile" 
+                        class="block px-4 py-2 text-sm text-black hover:bg-blue-500 hover:text-white font-semibold" role="menuitem"
+                        >
+                        Profile
+                    </a>
+                    <a 
+                        href="logout" 
+                        class="block px-4 py-2 text-sm text-black hover:bg-blue-500 hover:text-white font-semibold" role="menuitem"
+                        >
+                        Logout
+                    </a>
+                </div>
             </div>
-        </a>
+        </div>
+
         <% } else { %>
 
         <a href="/abc-cinema/login.jsp">
@@ -67,3 +97,10 @@
         <% }%>
     </div>
 </header>
+
+<script>
+    function toggleDropdown() {
+        const dropdown = document.getElementById('avatarDropdownMenu');
+        dropdown.classList.toggle('hidden');
+    }
+</script>

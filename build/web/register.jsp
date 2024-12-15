@@ -10,14 +10,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        <link rel="icon" href="./assets/img/logo.png" type="image/x-icon">
+        <link rel="icon" href="./assets/img/logo_white.png" type="image/x-icon">
         <title>ABC Cinema | Register</title>
 
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
     </head>
-    <body class="bg-[#eee]">
+    <body class="bg-[#eee] overflow-x-hidden">
 
         <%@include file="./components/header.jsp" %>
 
