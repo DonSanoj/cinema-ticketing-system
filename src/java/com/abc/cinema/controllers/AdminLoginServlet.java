@@ -21,7 +21,7 @@ import org.mindrot.jbcrypt.BCrypt;
 
 /**
  *
- * @author Shayan
+ * @author DON
  */
 @WebServlet("/admin_login")
 public class AdminLoginServlet extends HttpServlet {
@@ -37,22 +37,23 @@ public class AdminLoginServlet extends HttpServlet {
             Admin admin = AdminDAO.getAdminByEmail(admin_email);
 
             if (admin != null) {
-                
+                // Verify the password
                 if (BCrypt.checkpw(password, admin.getPassword())) {
-                    
+                    // Successful login, store admin details in session
                     req.getSession().setAttribute("admin_id", admin.getAdminId());
                     req.getSession().setAttribute("admin_email", admin.getAdminEmail());
                     req.getSession().setAttribute("admin_name", admin.getAdminname());
                     req.getSession().setAttribute("admin_type", admin.getAdminType());
 
-                    res.sendRedirect("/test-web/Admin/admin_dashboard.jsp");
+                    // Redirect to the admin dashboard or homepage
+                    res.sendRedirect("/abc-cinema/Admin/admin_dashboard.jsp");
                 } else {
-                    
+                    // Invalid password
                     req.setAttribute("errorMessage", "Invalid password. Please try again.");
                     req.getRequestDispatcher("/admin_login.jsp").forward(req, res);
                 }
             } else {
-                
+                // Email not found
                 req.setAttribute("errorMessage", "Email not found. Please check your email.");
                 req.getRequestDispatcher("/admin_login.jsp").forward(req, res);
             }
@@ -63,4 +64,5 @@ public class AdminLoginServlet extends HttpServlet {
             req.getRequestDispatcher("/admin_login.jsp").forward(req, res);
         }
     }
+
 }

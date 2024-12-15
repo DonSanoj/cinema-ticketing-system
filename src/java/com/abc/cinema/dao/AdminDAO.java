@@ -51,7 +51,8 @@ public class AdminDAO {
         }
         return false;
     }
-
+    
+    
     // Get admin by email
     public static Admin getAdminByEmail(String admin_email) throws SQLException {
         String sql = "SELECT * FROM admins WHERE admin_email = ?";
