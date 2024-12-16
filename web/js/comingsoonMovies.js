@@ -6,7 +6,7 @@
 $(document).ready(function () {
 
     $.ajax({
-        url: '/test-web/comingsoonmovies',
+        url: '/abc-cinema/comingsoonmovies',
         type: 'GET',
         headers: {"X-Requested-With": "XMLHttpRequest"},
         dataType: 'json',
