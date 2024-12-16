@@ -8,6 +8,10 @@
         <servlet-name>AddReviewServlet</servlet-name>
         <servlet-class>com.abc.cinema.controllers.AddReviewServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>IndexComingSoonServlet</servlet-name>
+        <servlet-class>com.abc.cinema.controllers.IndexComingSoonServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>PaymentServlet</servlet-name>
         <url-pattern>/PaymentServlet</url-pattern>
@@ -15,5 +19,9 @@
     <servlet-mapping>
         <servlet-name>AddReviewServlet</servlet-name>
         <url-pattern>/AddReviewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IndexComingSoonServlet</servlet-name>
+        <url-pattern>/IndexComingSoonServlet</url-pattern>
     </servlet-mapping>
 </web-app>
