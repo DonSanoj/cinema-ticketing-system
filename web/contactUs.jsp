@@ -6,16 +6,26 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="./assets/img/logo_white.png" type="image/x-icon">
         <title>ABC Cinema | Contact Us</title>
 
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+
     </head>
 
-    <body class="bg-gray-100">
+    <body class="bg-gray-100 overflow-x-hidden">
 
         <%@include file="./components/header.jsp" %>
 
@@ -53,27 +63,22 @@
 
             <!-- Contact Form -->
             <div class="lg:w-1/2 px-6">
-                <form action="" method="post" class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex flex-wrap -mx-2 mb-4">
-                        <div class="w-full md:w-1/2 px-2">
-                            <label for="firstName" class="block text-sm font-medium text-gray-700"><strong class="text-red-500">*</strong> First Name</label>
-                            <input type="text" id="firstName" name="firstName" required
-                                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-black-500 focus:border-black-500 sm:text-sm">
-                        </div>
-                        <div class="w-full md:w-1/2 px-2">
-                            <label for="lastName" class="block text-sm font-medium text-gray-700"><strong class="text-red-500">*</strong> Last Name</label>
-                            <input type="text" id="lastName" name="lastName" required
-                                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-black-500 focus:border-black-500 sm:text-sm">
-                        </div>
-                    </div>
+
+                <form class="bg-white p-6 rounded-lg shadow-md" id="form">
+
                     <div class="mb-4">
                         <label for="email" class="block text-sm font-medium text-gray-700"><strong class="text-red-500">*</strong> Email</label>
                         <input type="email" id="email" name="email" required
                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-black-500 focus:border-black-500 sm:text-sm">
                     </div>
                     <div class="mb-4">
-                        <label for="phoneNumber" class="block text-sm font-medium text-gray-700"><strong class="text-red-500">*</strong> Phone Number</label>
-                        <input type="tel" id="phoneNumber" name="phoneNumber" required
+                        <label for="name" class="block text-sm font-medium text-gray-700"><strong class="text-red-500">*</strong> Name</label>
+                        <input type="text" id="sendername" name="sendername" required
+                               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-black-500 focus:border-black-500 sm:text-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label for="subject" class="block text-sm font-medium text-gray-700"><strong class="text-red-500">*</strong> Subject</label>
+                        <input type="text" id="subject" name="subject" required
                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-black-500 focus:border-black-500 sm:text-sm">
                     </div>
                     <div class="mb-6">
@@ -82,10 +87,14 @@
                                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-black-500 focus:border-black-500 sm:text-sm"></textarea>
                     </div>
                     <div class="text-center">
-                        <button type="submit"
-                                class="w-full bg-black text-white font-semibold py-2 rounded-md hover:bg-blue-500">Send
-                            Message</button>
+                        <input
+                            type="submit"
+                            id="email_send"
+                            value="Send Message"
+                            class="w-full bg-black text-white font-semibold py-2 rounded-md hover:bg-blue-500"
+                            />
                     </div>
+
                 </form>
             </div>
         </section>
@@ -96,5 +105,13 @@
 
     <script src="./js/searchResult.js"></script>
     <script src="./js/footer.js"></script>
-</html>
+    <script src="./js/contactUs.js"></script>
 
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('c_Zr8FH7dq0143F56')
+    </script>
+
+</html>
