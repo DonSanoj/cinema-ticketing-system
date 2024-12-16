@@ -118,4 +118,16 @@ public class MovieDAO {
             return null;
         }
     }
+    public int getAllMoviesCount() throws SQLException {
+        String query = "SELECT COUNT(*) FROM movies";
+
+        try (Connection connection = DbConnection.getConnection(); PreparedStatement ps = connection.prepareStatement(query)) {
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getInt(1);
+                }
+            }
+        }
+        return 0;
+     }
 }
