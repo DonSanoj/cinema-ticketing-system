@@ -35,7 +35,7 @@ $.ajax({
                             
                             <div class="flex space-x-2">
                                 <!-- Book Tickets Button -->
-                                <a href="/test-web/moviesessions/movie-session?movie_id=${movie.movieId}&movie_name=${encodeURIComponent(movie.movieName)}&genre=${encodeURIComponent(movie.genre)}&language=${encodeURIComponent(movie.language)}&movie_image=${encodeURIComponent(movieImageUrl)}"
+                                <a href="/abc-cinema/moviesessions/movie-session?movie_id=${movie.movieId}&movie_name=${encodeURIComponent(movie.movieName)}&genre=${encodeURIComponent(movie.genre)}&language=${encodeURIComponent(movie.language)}&movie_image=${encodeURIComponent(movieImageUrl)}"
                                         class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition duration-300">
                                     Book Tickets
                                 </a>

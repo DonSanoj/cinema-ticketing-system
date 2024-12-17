@@ -19,20 +19,22 @@ $(document).ready(function () {
             success: function (data) {
 
                 const showtimesContainer = $('#showtimes-container');
-                showtimesContainer.empty(); // Clear previous content
+                showtimesContainer.empty();
 
                 // Check if data is available and iterate over showtimes
                 if (data && data.length > 0) {
                     data.forEach(function (showtime) {
                         showtimesContainer.append(`
-                            <div class="showtime-item">
+                            <div class="showtime-item bg-black rounded-lg text-white p-4">
                         
                                 <p><strong>Complex Name:</strong> ${showtime.complex_name}</p>
                                 <p><strong>Hall Name:</strong> ${showtime.hall_name}</p>
                                 
-                                <a href="/test-web/seatlayout/seatBooking.jsp?showtime_id=${showtime.showtime_id}">
-                                    <p><strong>Start Time:</strong> ${showtime.start_time}</p>
-                                    <p><strong>Date:</strong> ${showtime.date}</p>
+                                <a href="/abc-cinema/seatlayout/seatBooking.jsp?showtime_id=${showtime.showtime_id}">
+                                    <div class="bg-white hover:bg-blue-500 text-black hover:text-white p-2 rounded-lg">
+                                        <p><strong>Start Time:</strong> ${showtime.start_time}</p>
+                                        <p><strong>Date:</strong> ${showtime.date}</p>
+                                    </div>
                                 </a>
                                 <hr>
                             </div>

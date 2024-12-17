@@ -6,12 +6,11 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    // No need to redeclare the 'session' object as it is implicitly available in JSP
     HttpSession adminSession = request.getSession(false);
 
     if (adminSession == null || adminSession.getAttribute("admin_email") == null) {
         response.sendRedirect("/abc-cinema/admin_login.jsp");
-        return;  // Ensures the page doesn't continue rendering
+        return;
     }
 %>
 

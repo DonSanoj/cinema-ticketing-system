@@ -125,5 +125,7 @@
         alertify.error("<%= request.getAttribute("errorMessage")%>");
         <% }%>
     </script>
+    
+    <script src="./js/add_show_time.js"></script>
 </body>
 </html>

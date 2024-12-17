@@ -35,7 +35,7 @@ import jakarta.servlet.http.Part;
 public class AddMovieServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
-    private static final String DROPBOX_ACCESS_TOKEN = "sl.CB9Nlv8Rmdio-92EMzpXx_llAmo36bPMACr6DwlEOD-ffs5RuslKpuTnYxHNtn5TyOWEsvq4-LuMm3MT-s8mNpbAMrrpo_MosWpb7DwOHHvtAgVmW_B7Sf_YJniotWznFDgvrYM8T2XGxQwMr4AqzmQ";
+    private static final String DROPBOX_ACCESS_TOKEN = "sl.CCtxqfUDk6EI5eqKmM3ueDzvLIUqa_wgvd2vkGCPVgb_r55w3EYTQc76yon6G6KFVdt_hBBs5Ju0PawkCVaCyT7G04PwclyctzQBV7_SYTOF7QsHfCmBRqks3VFuPAfhIeGAhzirheedNQFW6i4Q9AM";
     private static final String DROPBOX_FOLDER = "/uploads/";
 
     private final MovieDAO moviedao = new MovieDAO();

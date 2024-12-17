@@ -15,6 +15,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import org.mindrot.jbcrypt.BCrypt;
 
 /**
@@ -85,10 +86,21 @@ public class CustomerAuthServlet extends HttpServlet {
             Customer customer = CustomerDAO.getCustomerByEmail(customerEmail);
 
             if (customer != null && BCrypt.checkpw(password, customer.getPassword())) {
-                req.getSession().setAttribute("customer_id", customer.getCustomerId());
-                req.getSession().setAttribute("email", customer.getEmail());
-                req.getSession().setAttribute("customer_name", customer.getCustomername());
-                res.sendRedirect("/abc-cinema");
+                // Set session attributes for logged-in customer
+                HttpSession session = req.getSession();
+                session.setAttribute("customer_id", customer.getCustomerId());
+                session.setAttribute("email", customer.getEmail());
+                session.setAttribute("customer_name", customer.getCustomername());
+                session.setAttribute("phone_number", customer.getPhoneNumber());
+
+                String redirectAfterLogin = (String) session.getAttribute("redirectAfterLogin");
+
+                if (redirectAfterLogin != null) {
+                    session.removeAttribute("redirectAfterLogin");
+                    res.sendRedirect(redirectAfterLogin);
+                } else {
+                    res.sendRedirect("/abc-cinema/"); 
+                }
             } else {
                 req.setAttribute("loginErrorMessage", "Invalid email or password. Please try again.");
                 req.getRequestDispatcher("/login.jsp").forward(req, res);

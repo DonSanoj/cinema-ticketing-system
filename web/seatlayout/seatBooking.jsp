@@ -23,7 +23,7 @@
             originalUrl += "?" + request.getQueryString();
         }
         request.getSession(true).setAttribute("redirectAfterLogin", originalUrl);
-        response.sendRedirect("/test-web/login.jsp");
+        response.sendRedirect("/abc-cinema/login.jsp");
         return;
     }
 %>
@@ -50,9 +50,9 @@
 
         <%@include file="../components/header.jsp" %>
 
-        <div id="movie-container" class="movie-container mb-8 text-center p-10"></div>
+        <!--<div id="movie-container" class="movie-container mb-8 text-center p-10"></div>-->
 
-        <div class="mb-6 text-center flex flex-row space-x-4">
+        <div class="mb-6 text-center flex flex-row space-x-4 mt-6">
             <div class=" items-center justify-center flex text-center space-x-2">
                 <p class=" font-semibold">Available : </p>
                 <p class="text-gray-500 text-4xl font-semibold mx-auto p-1">●</p>
@@ -219,7 +219,7 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
         <script type="text/javascript">
-            emailjs.init('c_Zr8FH7dq0143F56')
+            emailjs.init('c_Zr8FH7dq0143F56');
         </script>
 
     </body>

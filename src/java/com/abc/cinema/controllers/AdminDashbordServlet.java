@@ -3,9 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.abc.cinema.controllers;
+
 import com.abc.cinema.dao.AllUsersManageDAO;
 import com.abc.cinema.dao.MovieDAO;
 import com.abc.cinema.models.Customer;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -18,7 +20,7 @@ import java.util.ArrayList;
  * @author Himantha
  */
 @WebServlet("/Admin/admin_dashboard")
-public class admin_dashbordServlet {
+public class AdminDashbordServlet {
     private AllUsersManageDAO allUsersManageDAO;
     private MovieDAO movieDAO;
     public void init() throws ServletException {

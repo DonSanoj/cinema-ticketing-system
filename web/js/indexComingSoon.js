@@ -3,29 +3,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/JavaScript.js to edit this template
  */
 
-$(document).ready(function () {
 
-    $.ajax({
-        url: '/abc-cinema/comingsoonmovies',
-        type: 'GET',
-        headers: {"X-Requested-With": "XMLHttpRequest"},
-        dataType: 'json',
-        success: function (data) {
-            console.log(data);
-            $('#coming-soon-movie').empty(); // Clear any previous movie data
+$.ajax({
+    url: '/abc-cinema/indexcomingsoon',
+    type: 'GET',
+    headers: {"X-Requested-With": "XMLHttpRequest"},
+    dataType: 'json',
+    success: function (data) {
+        console.log(data);
+        $('#coming-soon-movie').empty(); // Clear any previous movie data
 
-            if (Array.isArray(data) && data.length > 0) {
-                data.forEach(function (moviescomingsoon) {
-                    // Transform Dropbox URL to direct file access
-                    let movieImageUrl = moviescomingsoon.movieImage
-                            ? moviescomingsoon.movieImage.replace("https://www.dropbox.com/", "https://dl.dropboxusercontent.com/")
-                            .replace(/([?&])dl=\d/, '')
-                            : 'default-placeholder-image-url.jpg'; // Fallback image if movieImage is missing
+        if (Array.isArray(data) && data.length > 0) {
+            data.forEach(function (moviescomingsoon) {
+                // Transform Dropbox URL to direct file access
+                let movieImageUrl = moviescomingsoon.movieImage
+                        ? moviescomingsoon.movieImage.replace("https://www.dropbox.com/", "https://dl.dropboxusercontent.com/")
+                        .replace(/([?&])dl=\d/, '')
+                        : 'default-placeholder-image-url.jpg'; // Fallback image if movieImage is missing
 
-                    let trailerLink = moviescomingsoon.trailer_link ? decodeURIComponent(moviescomingsoon.trailer_link) : '#';
+                let trailerLink = moviescomingsoon.trailer_link ? decodeURIComponent(moviescomingsoon.trailer_link) : '#';
 
-                    // Append movie card to the list
-                    $('#coming-soon-movie').append(`
+                // Append movie card to the list
+                $('#coming-soon-movie').append(`
                         <div class="movie-card col-span-1 bg-gray-800 rounded-lg relative shadow-lg hover:scale-105 transition-transform duration-300">
                             <img src="${movieImageUrl}" alt="${moviescomingsoon.movieName}" class="w-full h-56 object-cover rounded-lg opacity-80 hover:opacity-90 transition-opacity duration-300">
                             <div class="absolute bottom-4 left-4 text-white">
@@ -47,17 +46,14 @@ $(document).ready(function () {
                             </div>
                         </div>
                     `);
-                });
-            } else {
-                $('#coming-soon-movie').append('<div class="col-span-3 text-center text-white">No movies found.</div>');
-            }
-
-        },
-        error: function (xhr, status, error) {
-            console.error('Error fetching data:', error);
-            $('.error-message').text('Failed to fetch data. Error: ' + error);
+            });
+        } else {
+            $('#coming-soon-movie').append('<div class="col-span-3 text-center text-white">No movies found.</div>');
         }
-    });
+
+    },
+    error: function (xhr, status, error) {
+        console.error('Error fetching data:', error);
+        $('.error-message').text('Failed to fetch data. Error: ' + error);
+    }
 });
-
-

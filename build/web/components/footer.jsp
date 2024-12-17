@@ -9,7 +9,7 @@
 <footer class="bg-black text-white py-8 px-4 md:px-8">
     <div class=" mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-16">
         <div>
-            <img src="./assets/img/logo_white.png" class="h-32 w-48" />
+            <img src="<%= (request.getAttribute("pageType") != null && request.getAttribute("pageType").equals("non-root")) ? "../assets/img/logo_white.png" : "./assets/img/logo_white.png"%>" class="h-32 w-48" />
             <p class="mt-2">Get 10% off your Booking in this festival season.</p>
             <input type="email" placeholder="Enter your email" class="mt-2 w-full px-4 py-2 rounded text-black">
         </div>
