@@ -1,4 +1,4 @@
-# cinema-ticketing-system
+# cinema-ticketing-system - PUSL2024 Course Work
 
 A modern web-based platform for cinema ticket booking, developed using Java, JSP, and Servlets, and hosted on the Apache Tomcat server. This system provides a seamless experience for customers to browse movies, select seats, and complete reservations with ease. Key features include:
 
